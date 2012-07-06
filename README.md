@@ -21,7 +21,7 @@ Use `ActivityOptionsCompat2` just as you would [`ActivityOptions`][api] and use
 ```java
 Intent intent = new Intent(this, OtherActivity.class);
 ActivityOptionsCompat2 options =
-    ActivityOptions.makeThumbnailScaleUpAnimation(view, thumb, 0, 0);
+    ActivityOptionsCompat2.makeThumbnailScaleUpAnimation(view, thumb, 0, 0);
 ActivityCompat2.startActivity(this, intent, options.toBundle());
 ```
 
