@@ -10,7 +10,7 @@ import static com.jakewharton.activitycompat2.ActivityCompat2.YOU_JELLY;
 
 /**
  * Helper class for building an options Bundle that can be used with
- * {@link ActivityCompat2#startActiviy(android.app.Activity, android.content.Intent, android.os.Bundle)}.
+ * {@link ActivityCompat2#startActivity(android.app.Activity, android.content.Intent, android.os.Bundle)}.
  */
 public class ActivityOptionsCompat2 {
   /**
@@ -86,7 +86,7 @@ public class ActivityOptionsCompat2 {
 
   /**
    * Returns the created options as a Bundle, which can be passed to
-   * {@link ActivityCompat2#startActiviy(android.app.Activity, android.content.Intent, android.os.Bundle)}. Note that
+   * {@link ActivityCompat2#startActivity(android.app.Activity, android.content.Intent, android.os.Bundle)}. Note that
    * the returned Bundle is still owned by the ActivityOptions object; you must not modify it, but can supply it to the
    * startActivity methods that take an options Bundle.
    */

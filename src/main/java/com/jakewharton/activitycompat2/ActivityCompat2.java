@@ -22,7 +22,7 @@ public class ActivityCompat2 extends ActivityCompat {
    *                {@link ActivityOptionsCompat2} for how to build the Bundle supplied here; there are no supported
    *                definitions for building it manually.
    */
-  public static void startActiviy(Activity activity, Intent intent, Bundle options) {
+  public static void startActivity(Activity activity, Intent intent, Bundle options) {
     if (YOU_JELLY) {
       JellyBeanImpl.startActivity(activity, intent, options);
     } else {
