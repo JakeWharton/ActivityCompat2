@@ -30,9 +30,33 @@ public class ActivityCompat2 extends ActivityCompat {
     }
   }
 
+  /**
+   * Start new activity with options, if able, for which you would like a result when it finished.
+   *
+   * @see Activity#startActivityForResult(android.content.Intent, int requestCode, android.os.Bundle)
+   *
+   * @param activity Origin activity to launch from.
+   * @param intent The description of the activity to start.
+   * @param requestCode If >= 0, this code will be returned in onActivityResult() when the activity exits.
+   * @param options Additional options for how the Activity should be started. May be null if there are no options. See
+   *                {@link ActivityOptionsCompat2} for how to build the Bundle supplied here; there are no supported
+   *                definitions for building it manually.
+   */
+  public static void startActivityForResult(Activity activity, Intent intent, int requestCode, Bundle options) {
+    if (YOU_JELLY) {
+      JellyBeanImpl.startActivityForResult(activity, intent, requestCode, options);
+    } else {
+      activity.startActivityForResult(intent, requestCode);
+    }
+  }
+
   private static class JellyBeanImpl {
     static void startActivity(Activity activity, Intent intent, Bundle options) {
       activity.startActivity(intent, options);
+    }
+
+    static void startActivityForResult(Activity activity, Intent intent, int requestCode, Bundle options) {
+      activity.startActivityForResult(intent, requestCode, options);
     }
   }
 }
