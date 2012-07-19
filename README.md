@@ -16,7 +16,7 @@ Usage
 -----
 
 Use `ActivityOptionsCompat2` just as you would [`ActivityOptions`][api] and use
-`ActivityCompat2` for calling `startActivity`.
+`ActivityCompat2` for calling `startActivity` or `startActivityForResult`.
 
 ```java
 Intent intent = new Intent(this, OtherActivity.class);

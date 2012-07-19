@@ -8,5 +8,5 @@ fi
 rm -rf out *.jar
 mkdir out
 javac -d out -cp "$ANDROID_HOME/platforms/android-16/android.jar:libs/android-support-v4.jar" src/main/java/com/jakewharton/activitycompat2/*
-$(cd out && jar cf ../ActivityCompat2-1.0.1.jar *)
+$(cd out && jar cf ../ActivityCompat2-1.1.0.jar *)
 rm -rf out
